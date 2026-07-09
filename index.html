@@ -50,7 +50,7 @@
 <body class="bg-black text-neutral-900 font-sans selection:bg-neutral-900 selection:text-white overflow-x-hidden">
 
     <!-- TOP ANNOUNCEMENT BAR -->
-    <div class="bg-black text-white text-xs tracking-[0.2em] py-2 px-4 text-center border-b border-white uppercase flex justify-between items-center md:flex">
+    <div class="bg-black text-white text-xs tracking-[0.2em] py-2 px-4 text-center border-b border-white uppercase flex justify-between items-center md:flex hidden md:block">
         <span>THIS IS STRICTLY A SAMPLE WEBSITE</span>
         <span>BOLALE CREATIVES: HOTEL AND RESTAURANT SAMPLE WEBSITE</span>
         <span>CALL US: *251973340691</span>
@@ -752,7 +752,7 @@
                 subtitle: "Made Special. Made Bolale.",
                 price: 499,
                 desc: "A juicy flame-grilled beef patty layered with melted cheddar, fresh lettuce, ripe tomato, crisp pickles, caramelized onions, and our signature Bolale special sauce, all served on a soft toasted brioche bun.",
-                image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&q=80&w=600"
+                image: "https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
                 id: 'food-2',
@@ -760,27 +760,27 @@
                 subtitle: "House Signature Steak Plate",
                 price: 785,
                 desc: "Grade A5 Japanese Wagyu steak encrusted in organic ground dark espresso beans, lightly charcoal-grilled, served with a velvety bone-marrow glaze.",
-                image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+                image: "https://plus.unsplash.com/premium_photo-1695758787947-0aff87c1f93a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
                 id: 'food-3',
-                title: "Organic Harvest Greens",
+                title: "Chicken Beef",
                 subtitle: "Crispy Sesame Avocado Salad",
                 price: 550,
                 desc: "Locally sourced crispy green kale, hand-sliced hass avocados, roasted white and black sesame seeds with cold-pressed ginger vinaigrette.",
-                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=600"
+                image: "https://plus.unsplash.com/premium_photo-1661419883163-bb4df1c10109?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
                 id: 'food-4',
-                title: "Organic Harvest Greens",
+                title: "Special Pizza",
                 subtitle: "Crispy Sesame Avocado Salad",
                 price: 525,
                 desc: "Locally sourced crispy green kale, hand-sliced hass avocados, roasted white and black sesame seeds with cold-pressed ginger vinaigrette.",
-                image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+                image: "https://images.unsplash.com/photo-1700760934249-93efbb574d23?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             },
             {
                 id: 'food-5',
-                title: "Organic Harvest Greens",
+                title: "Vegetable Punch",
                 subtitle: "Crispy Sesame Avocado Salad",
                 price: 999,
                 desc: "Locally sourced crispy green kale, hand-sliced hass avocados, roasted white and black sesame seeds with cold-pressed ginger vinaigrette.",
@@ -790,8 +790,16 @@
 
         let drinks = [
             {
+                id: 'drink-5',
+                title: "Ethiopian Coffee",
+                subtitle: "Perfect Coffee",
+                price: 9,
+                desc: "Double-shot pressure extracted espresso topped with perfectly aerated micro-foam oat milk, featuring customized fine art leaf stenciling.",
+                image: "https://images.unsplash.com/photo-1630861412229-67e2acb44b7a?q=80&w=1996&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            },
+            {
                 id: 'drink-1',
-                title: "Iced Favorites",
+                title: "Iced Chocolate",
                 subtitle: "Pour-Over Cold Brew Infusion",
                 price: 12,
                 desc: "Cold-dripped over a 12-hour period using premium Ethiopian single-estate beans, sweetened naturally with local wild honeycomb.",
@@ -799,7 +807,7 @@
             },
             {
                 id: 'drink-2',
-                title: "Organic Beans Espresso Latte",
+                title: "Espresso Latte",
                 subtitle: "Perfect Latte Art Cappuccino",
                 price: 9,
                 desc: "Double-shot pressure extracted espresso topped with perfectly aerated micro-foam oat milk, featuring customized fine art leaf stenciling.",
@@ -807,11 +815,19 @@
             },
             {
                 id: 'drink-3',
-                title: "Charcoal Infused Smoky Tonic",
+                title: "Smoky Tonic",
                 subtitle: "Night-Time Mocktail Signature",
                 price: 14,
                 desc: "Activated food-grade organic coconut charcoal, pressed fresh key lime, sparkling tonic, topped with a smoked rosemary twig garnish.",
                 image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                id: 'drink-4',
+                title: "Macchiato",
+                subtitle: "Perfect Latte Art Cappuccino",
+                price: 9,
+                desc: "Double-shot pressure extracted espresso topped with perfectly aerated micro-foam oat milk, featuring customized fine art leaf stenciling.",
+                image: "https://plus.unsplash.com/premium_photo-1673545518947-ddf3240090b1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             }
         ];
 
