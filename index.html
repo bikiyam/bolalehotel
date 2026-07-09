@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolale Hotel & Restaurant | Premium Luxury Experience</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        neutral: {
+                            950: '#0a0a0a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar to match sleek black & white aesthetic */
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #171717;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #404040;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #737373;
+        }
+    </style>
+</head>
+<body class="bg-black text-neutral-900 font-sans selection:bg-neutral-900 selection:text-white overflow-x-hidden">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-black text-white text-xs tracking-[0.2em] py-2 px-4 text-center border-b border-white uppercase flex justify-between items-center md:flex">
+        <span>THIS IS STRICTLY A SAMPLE WEBSITE</span>
+        <span>BOLALE CREATIVES: HOTEL AND RESTAURANT SAMPLE WEBSITE</span>
+        <span>CALL US: *251973340691</span>
+    </div>
+
+    <!-- MAIN HEADER NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex flex-col items-start group">
+                <span class="font-serif text-2xl font-bold tracking-wider text-neutral-950 group-hover:text-neutral-700 transition-colors">BOLALE</span>
+                <span class="text-[9px] tracking-[0.4em] text-neutral-500 uppercase -mt-1">HOTEL & RESTAURANT</span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#hero" class="text-sm font-medium tracking-wide text-neutral-600 hover:text-black transition-colors uppercase">Home</a>
+                <a href="#showcase" class="text-sm font-medium tracking-wide text-neutral-600 hover:text-black transition-colors uppercase">Menu</a>
+                <a href="#rooms" class="text-sm font-medium tracking-wide text-neutral-600 hover:text-black transition-colors uppercase">Rooms</a>
+                <a href="#gallery" class="text-sm font-medium tracking-wide text-neutral-600 hover:text-black transition-colors uppercase">Gallery</a>
+                <a href="#awards" class="text-sm font-medium tracking-wide text-neutral-600 hover:text-black transition-colors uppercase">Awards</a>
+                <a href="#contact" class="text-sm font-medium tracking-wide text-neutral-600 hover:text-black transition-colors uppercase">Contact</a>
+            </nav>
+
+            <!-- Action CTAs -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <!----<button onclick="toggleManagerModal()" class="border border-neutral-300 hover:border-black text-neutral-700 hover:text-black text-xs font-semibold px-4 py-2 uppercase tracking-widest transition-all rounded-none flex items-center gap-2">
+                    <i class="fa-solid fa-sliders text-xs"></i> Customize Menu/Rooms
+                </button>--->
+                <a href="#contact" class="bg-black hover:bg-neutral-800 text-white text-xs font-semibold px-5 py-2.5 uppercase tracking-widest transition-all rounded-none">
+                    Book Now
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button onclick="toggleMobileMenu()" class="md:hidden text-neutral-900 focus:outline-none p-2" aria-label="Toggle Menu">
+                <i id="menuIcon" class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobileMenu" class="md:hidden bg-white border-b border-neutral-200 transition-all duration-300">
+            <div class="px-4 pt-2 pb-6 space-y-4">
+                <a href="#hero" onclick="toggleMobileMenu()" class="block text-sm font-medium tracking-wider uppercase text-neutral-800 hover:text-black py-2 border-b border-neutral-100">Home</a>
+                <a href="#showcase" onclick="toggleMobileMenu()" class="block text-sm font-medium tracking-wider uppercase text-neutral-800 hover:text-black py-2 border-b border-neutral-100">Menu</a>
+                <a href="#rooms" onclick="toggleMobileMenu()" class="block text-sm font-medium tracking-wider uppercase text-neutral-800 hover:text-black py-2 border-b border-neutral-100">Rooms</a>
+                <a href="#gallery" onclick="toggleMobileMenu()" class="block text-sm font-medium tracking-wider uppercase text-neutral-800 hover:text-black py-2 border-b border-neutral-100">Gallery</a>
+                <a href="#awards" onclick="toggleMobileMenu()" class="block text-sm font-medium tracking-wider uppercase text-neutral-800 hover:text-black py-2 border-b border-neutral-100">Awards</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block text-sm font-medium tracking-wider uppercase text-neutral-800 hover:text-black py-2 border-b border-neutral-100">Contact</a>
+                <div class="pt-4 flex flex-col gap-3">
+                    <button onclick="toggleManagerModal(); toggleMobileMenu();" class="w-full text-center border border-neutral-400 text-neutral-800 text-xs font-bold py-3 uppercase tracking-widest">
+                        <i class="fa-solid fa-sliders mr-2"></i> Manage Lists
+                    </button>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="w-full text-center bg-black text-white text-xs font-bold py-3 uppercase tracking-widest">
+                        Book a Table / Room
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Inspired by 'web design restaurant responsive SEO.jpg') -->
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] bg-neutral-950 text-white flex items-center overflow-hidden py-16">
+        <!-- Floating Abstract Background Rings -->
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <div class="absolute -top-40 -right-40 w-96 h-96 border border-neutral-900 rounded-full"></div>
+            <div class="absolute -top-10 -right-10 w-[600px] h-[600px] border border-neutral-700 rounded-full"></div>
+            <div class="absolute -bottom-20 -left-20 w-[500px] h-[500px] border border-neutral-800 rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
+            
+            <!-- Hero Left: Typography and Action -->
+            <div class="lg:col-span-6 space-y-8 text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-neutral-900 border border-neutral-800 rounded-full text-xs font-medium tracking-widest text-neutral-300 uppercase">
+                    <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+                    Culinary Excellence & Luxury Stay
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-serif font-semibold tracking-tight text-white leading-tight">
+                    Where Luxury <br>
+                    <span class="italic text-neutral-400 font-light">Meets Gastronomy</span>
+                </h1>
+                
+                <p class="text-neutral-400 text-base sm:text-lg font-light leading-relaxed max-w-xl">
+                    Experience an immersive retreat tailored for the refined. Indulge in world-class plates carefully crafted by culinary artists, and unwind in our high-end bespoke suites. 
+                </p>
+
+                <!-- Responsive Quick-Book Search bar (inspired by Disney and Healthy Food hero blocks) -->
+                <div class="bg-white text-neutral-900 p-3 shadow-2xl max-w-2xl grid grid-cols-2 md:grid-cols-4 gap-2 items-center border border-neutral-200">
+                    <div class="p-2 border-r border-neutral-200">
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1">Check In</label>
+                        <input type="date" class="w-full text-xs font-semibold focus:outline-none bg-transparent" value="2026-07-01">
+                    </div>
+                    <div class="p-2 md:border-r border-neutral-200">
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1">Check Out</label>
+                        <input type="date" class="w-full text-xs font-semibold focus:outline-none bg-transparent" value="2026-07-08">
+                    </div>
+                    <div class="p-2 border-r border-neutral-200 col-span-2 md:col-span-1">
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-400 mb-1">Guests</label>
+                        <select class="w-full text-xs font-semibold focus:outline-none bg-transparent cursor-pointer">
+                            <option>01 Guest</option>
+                            <option selected>02 Guests</option>
+                            <option>03 Guests</option>
+                            <option>04+ Guests</option>
+                        </select>
+                    </div>
+                    <button onclick="handleCheckAvailability()" class="col-span-2 md:col-span-1 bg-black hover:bg-neutral-800 text-white text-xs font-bold py-3.5 px-4 uppercase tracking-wider transition-all h-full flex items-center justify-center">
+                        Check Availability
+                    </button>
+                </div>
+                
+                <div class="flex items-center gap-6 pt-2">
+                    <a href="#showcase" class="text-sm font-semibold tracking-widest uppercase hover:text-neutral-400 transition-colors flex items-center gap-2">
+                        <span>Explore Menu</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <span class="text-neutral-700">|</span>
+                    <a href="#rooms" class="text-sm font-semibold tracking-widest uppercase hover:text-neutral-400 transition-colors flex items-center gap-2">
+                        <span>View Suites</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Right: Creative Plate & Accommodations Collage -->
+            <div class="lg:col-span-6 relative flex justify-center items-center">
+                <!-- Large decorative dark backplate -->
+                <div class="absolute w-72 h-72 sm:w-[450px] sm:h-[450px] bg-neutral-900 rounded-full mix-blend-screen opacity-60 blur-2xl"></div>
+                
+                <!-- Main Featured Visual Circle (Inspired by Healthy Food Plate layout) -->
+                <div class="relative w-80 h-80 sm:w-[480px] sm:h-[480px] rounded-full border border-neutral-800 p-6 sm:p-10 flex items-center justify-center bg-neutral-900/40 backdrop-blur-sm shadow-3xl">
+                    <img id="heroImage" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=600" 
+                         alt="Fine Culinary Plate" 
+                         class="w-full h-full object-cover rounded-full contrast-110 shadow-2xl ring-4 ring-neutral-800">
+                    
+                    <!-- Decorative Floating Badges -->
+                    <div class="absolute -top-4 -right-2 bg-black text-white px-4 py-2 text-center shadow-lg border border-white">
+                        <span class="block text-xl font-bold font-serif">5★</span>
+                        <span class="block text-[8px] tracking-widest font-semibold uppercase text-neutral-500">Michelin Guide</span>
+                    </div>
+                    <div class="absolute -bottom-6 left-10 bg-neutral-950 text-white border border-neutral-800 px-4 py-3 text-left shadow-lg max-w-[180px]">
+                        <span class="block text-xs font-semibold uppercase tracking-wider text-neutral-300 mb-1">Next Day Booking Available</span>
+                        <span class="text-[10px] text-neutral-500">Premium suites from $299/Night</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROMOTIONAL COUNTERS (Minimalist strip) -->
+    <section class="bg-white border-y border-neutral-200 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <span class="block text-3xl sm:text-4xl font-serif font-bold text-neutral-900">6+</span>
+                <span class="block text-xs tracking-widest text-neutral-500 uppercase mt-1 font-bold">Ethiopian Awards</span>
+            </div>
+            <div>
+                <span class="block text-3xl sm:text-4xl font-serif font-bold text-neutral-900">20+</span>
+                <span class="block text-xs tracking-widest text-neutral-500 uppercase mt-1 font-bold">Bespoke Foods</span>
+            </div>
+            <div>
+                <span class="block text-3xl sm:text-4xl font-serif font-bold text-neutral-900">100%</span>
+                <span class="block text-xs tracking-widest text-neutral-500 uppercase mt-1 font-bold">Organic & Clean </span>
+            </div>
+            <div>
+                <span class="block text-3xl sm:text-4xl font-serif font-bold text-neutral-900">4.8★</span>
+                <span class="block text-xs tracking-widest text-neutral-500 uppercase mt-1 font-bold">Guest Rating</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOD AND DRINK SHOWCASE (Inspired by 'The Coffee Shop Website Is Displayed In This Image.jpg') -->
+    <section id="showcase" class="py-24 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <div class="max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-500">ETHIOPIAN SELECTION</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-white">Our Signature Showcase</h2>
+                <div class="w-12 h-[2px] bg-black mx-auto my-4"></div>
+                <p class="text-neutral-500 text-sm sm:text-base font-light">
+                    Meticulously prepared delicacies using locally harvested ingredients, artisanal brewing tech, and traditional techniques. Toggle categories to explore our seasonal options.
+                </p>
+            </div>
+
+            <!-- Tab Buttons (Grayscale design) -->
+            <div class="flex justify-center space-x-4 mb-12 border-b border-neutral-200 max-w-md mx-auto">
+                <button onclick="switchTab('food')" id="tabBtn-food" class="pb-4 px-6 text-sm font-semibold uppercase tracking-widest border-b-2 border-black text-black focus:outline-none transition-all">
+                    Signature Plates
+                </button>
+                <button onclick="switchTab('drinks')" id="tabBtn-drinks" class="pb-4 px-6 text-sm font-medium uppercase tracking-widest border-b-2 border-transparent text-neutral-400 hover:text-black focus:outline-none transition-all">
+                    Artisanal Drinks    
+                </button>
+            </div>
+
+            <!-- Interactive List Grid (Dynamic injection) -->
+            <div id="showcaseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left transition-all duration-500">
+                <!-- JavaScript renders items here dynamically -->
+            </div>
+
+            <!-- Reservation Callout -->
+            <div class="mt-16 bg-white border border-neutral-200 p-8 max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="text-left space-y-2">
+                    <h3 class="font-serif text-xl font-bold">Have a special culinary request?</h3>
+                    <p class="text-xs text-neutral-500 max-w-md">Our executive chef offers customized table tasting menus for private dining. Contact us 24 hours in advance.</p>
+                </div>
+                <a href="#contact" class="bg-black hover:bg-neutral-800 text-white text-xs font-bold py-3.5 px-6 uppercase tracking-widest transition-all whitespace-nowrap">
+                    Reserve Dining Table
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ROOM SHOWCASE (Inspired by 'Disney Hotels And Resorts Anaheim.jpg') -->
+    <section id="rooms" class="py-24 bg-white border-t border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-20">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-500">Living and Resting Spaces</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-neutral-900">Hotel Rooms & Guest Houses</h2>
+                <div class="w-12 h-[2px] bg-black mx-auto my-4"></div>
+                <p class="text-neutral-500 text-sm sm:text-base font-light">
+                    Uncompromising space designed for relaxation and peaceful slumber. Each room offers stunning panoramic views, premium bedding, and automated comfort.
+                </p>
+            </div>
+
+            <!-- Dynamic Rooms Grid with Alternating Layouts -->
+            <div id="roomsGrid" class="space-y-16">
+                <!-- JavaScript renders items here dynamically -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ARTISTIC GALLERY SECTION (Minimalist Layout with Full Color Images) -->
+    <section id="gallery" class="py-24 bg-neutral-950 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-16">
+                <div class="space-y-4 text-left">
+                    <span class="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-400">Atmosphere & Environment</span>
+                    <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-white">Visual Gallery</h2>
+                    <div class="w-12 h-[2px] bg-neutral-500 my-2"></div>
+                </div>
+                <p class="text-neutral-400 text-sm font-light max-w-md text-left">
+                    Take a visual stroll through the elegant designs of our architecture, the vibrant energy of our kitchen, and the serene quietness of our suites.
+                </p>
+            </div>
+
+            <!-- Gallery Grid with modern full-color assets -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="relative h-80 overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=500" 
+                         alt="Gourmet Plating" 
+                         class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-neutral-950/20 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-4 left-4 text-left">
+                        <span class="text-[10px] tracking-widest uppercase text-neutral-300">01 / Gastronomy</span>
+                        <h4 class="font-serif text-sm font-semibold text-white mt-1">Plating Art</h4>
+                    </div>
+                </div>
+
+                <div class="relative h-80 overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=500" 
+                         alt="Hotel Exterior Architecture" 
+                         class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-neutral-950/20 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-4 left-4 text-left">
+                        <span class="text-[10px] tracking-widest uppercase text-neutral-300">02 / Exterior</span>
+                        <h4 class="font-serif text-sm font-semibold text-white mt-1">Monolithic Lines</h4>
+                    </div>
+                </div>
+
+                <div class="relative h-80 overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=500" 
+                         alt="Suites Interior Design" 
+                         class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-neutral-950/20 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-4 left-4 text-left">
+                        <span class="text-[10px] tracking-widest uppercase text-neutral-300">03 / Suite details</span>
+                        <h4 class="font-serif text-sm font-semibold text-white mt-1">Minimalist Linen</h4>
+                    </div>
+                </div>
+
+                <div class="relative h-80 overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=500" 
+                         alt="Premium Coffee Brewing" 
+                         class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-neutral-950/20 opacity-100 group-hover:opacity-0 transition-opacity duration-500"></div>
+                    <div class="absolute bottom-4 left-4 text-left">
+                        <span class="text-[10px] tracking-widest uppercase text-neutral-300">04 / Cafe Bar</span>
+                        <h4 class="font-serif text-sm font-semibold text-white mt-1">Hand-selected Roast</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aesthetic Callout Quote -->
+            <div class="mt-20 text-center max-w-4xl mx-auto space-y-4">
+                <p class="font-serif text-2xl sm:text-3xl italic text-neutral-300 leading-relaxed">
+                    "Simplicity is the ultimate sophistication. Every texture, shadow, and taste at Bolale exists to create an memory that stays with you forever."
+                </p>
+                <span class="block text-xs uppercase tracking-[0.3em] text-neutral-500">— Architectural Lead & Head Chef</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- AWARDS AND RATINGS SECTION -->
+    <section id="awards" class="py-24 bg-white border-b border-neutral-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-20">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-500">Proven Integrity</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-neutral-900">Awards & Testimonials</h2>
+                <div class="w-12 h-[2px] bg-black mx-auto my-4"></div>
+            </div>
+
+            <!-- Awards Logos/Cards Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Award 1 -->
+                <div class="border border-neutral-200 p-8 text-center bg-neutral-50 hover:bg-neutral-950 hover:text-white transition-colors duration-500 group">
+                    <i class="fa-solid fa-trophy text-4xl mb-6 text-neutral-400 group-hover:text-white"></i>
+                    <h3 class="font-serif text-lg font-bold mb-2">Five-Star Michelin Star</h3>
+                    <p class="text-xs text-neutral-500 group-hover:text-neutral-400 leading-relaxed">Awarded to the culinary division of Bolale for pristine flavors and conceptual creativity in fine dining.</p>
+                    <span class="inline-block mt-4 text-[10px] tracking-widest uppercase font-semibold text-neutral-400">2023 - 2026</span>
+                </div>
+                <!-- Award 2 -->
+                <div class="border border-neutral-200 p-8 text-center bg-neutral-50 hover:bg-neutral-950 hover:text-white transition-colors duration-500 group">
+                    <i class="fa-solid fa-award text-4xl mb-6 text-neutral-400 group-hover:text-white"></i>
+                    <h3 class="font-serif text-lg font-bold mb-2">Architectural Digest Top Stay</h3>
+                    <p class="text-xs text-neutral-500 group-hover:text-neutral-400 leading-relaxed">Recognized globally for its bespoke minimalist monochrome interiors and sustainable build philosophy.</p>
+                    <span class="inline-block mt-4 text-[10px] tracking-widest uppercase font-semibold text-neutral-400">Best Design 2025</span>
+                </div>
+                <!-- Award 3 -->
+                <div class="border border-neutral-200 p-8 text-center bg-neutral-50 hover:bg-neutral-950 hover:text-white transition-colors duration-500 group">
+                    <i class="fa-solid fa-medal text-4xl mb-6 text-neutral-400 group-hover:text-white"></i>
+                    <h3 class="font-serif text-lg font-bold mb-2">Global Eco Hospitality</h3>
+                    <p class="text-xs text-neutral-500 group-hover:text-neutral-400 leading-relaxed">Honoring our strict pledge toward single-use plastic elimination and direct farm-to-table supply chains.</p>
+                    <span class="inline-block mt-4 text-[10px] tracking-widest uppercase font-semibold text-neutral-400">Outstanding Pledge</span>
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 bg-neutral-50 p-8 sm:p-12 border border-neutral-200">
+                <div class="space-y-6 text-left border-b lg:border-b-0 lg:border-r border-neutral-200 pb-8 lg:pb-0 lg:pr-8">
+                    <div class="flex text-black gap-1">
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                    </div>
+                    <p class="text-sm italic text-neutral-600 leading-relaxed">
+                        "The espresso masterpiece is an understatement. Combining the deep organic beans with a minimalist backdrop in the lounge was a perfect sensory experience. The checking-in process was seamless."
+                    </p>
+                    <div>
+                        <span class="block text-xs font-bold uppercase tracking-wider text-neutral-950">Victoria V. Sterling</span>
+                        <span class="text-[10px] text-neutral-500">Travel & Leisure Writer</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6 text-left lg:pl-8 pt-8 lg:pt-0">
+                    <div class="flex text-black gap-1">
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                        <i class="fa-solid fa-star text-sm"></i>
+                    </div>
+                    <p class="text-sm italic text-neutral-600 leading-relaxed">
+                        "Staying in the Luxury Family Delux room felt like moving into a high-end luxury architectural project. There is zero clutter, wonderful acoustics, and incredibly attentive service."
+                    </p>
+                    <div>
+                        <span class="block text-xs font-bold uppercase tracking-wider text-neutral-950">Arthur Pendelton</span>
+                        <span class="text-[10px] text-neutral-500">Design Lead, Apex Agency</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT INFORMATION & MAP (Inspired by 'Corporate Contact US Page Design __ Behance.jpg') -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                <span class="text-xs font-semibold tracking-[0.3em] uppercase text-neutral-500">Get In Touch</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-semibold text-neutral-900">Connect with us</h2>
+                <div class="w-12 h-[2px] bg-black mx-auto my-4"></div>
+            </div>
+
+            <!-- Clean 3-Column Grid Contact Blocks -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+                <!-- Box 1: Visit Us -->
+                <div class="border border-neutral-200 p-8 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-neutral-950 text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-location-dot text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 uppercase tracking-wide">Visit Us</h3>
+                    <a href="https://maps.google.com" target="_blank" class="text-xs font-bold tracking-wider text-black hover:underline uppercase">
+                        Rwanda st., Addis Ababa, Ethiopia
+                    </a>
+                </div>
+
+                <!-- Box 2: Call Us -->
+                <div class="border border-neutral-200 p-8 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-neutral-950 text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-phone-flip text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 uppercase tracking-wide">Call Us</h3>
+                    <a href="tel:+4402031167711" class="text-xs font-bold tracking-wider text-black hover:underline uppercase">
+                        +251 973340691
+                    </a>
+                </div>
+
+                <!-- Box 3: Contact Us -->
+                <div class="border border-neutral-200 p-8 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-neutral-950 text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 uppercase tracking-wide">Email Us</h3>
+                    <a href="mailto:noreply@noland.com" class="text-xs font-bold tracking-wider text-black hover:underline">
+                        bolalecreatives@gmail.com
+                    </a>
+                </div>
+                <!-- Box 3: Social Media -->
+                <div class="border border-neutral-200 p-8 text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-neutral-950 text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-serif mb-2 uppercase tracking-wide">Social Media</h3>
+                    <a href="mailto:noreply@noland.com" class="text-xs font-bold tracking-wider text-black hover:underline">
+                        bolalecreatives@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Section: Map and Reservation Form side-by-side -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Custom Stylized Grayscale Mock Map (Vector visual with pin) -->
+                <div class="lg:col-span-7 bg-neutral-100 border border-neutral-200 min-h-[350px] relative flex items-center justify-center overflow-hidden">
+                    <!-- Grid background mimicking a map style -->
+                    <div class="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:30px_30px]"></div>
+                    
+                    <!-- Beautiful Vector Map Abstract Graphics -->
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div class="w-64 h-64 border-2 border-neutral-300 rounded-full animate-ping opacity-30"></div>
+                        <div class="w-96 h-96 border border-neutral-300 rounded-full opacity-30"></div>
+                        <!-- Abstract rivers/streets vectors using SVGs -->
+                        <svg class="absolute w-full h-full text-neutral-300 stroke-current opacity-70" fill="none" stroke-width="2">
+                            <path d="M0,100 C150,120 300,50 450,150 C600,250 750,200 900,220" />
+                            <path d="M100,0 L150,500" stroke-dasharray="5,5" />
+                            <path d="M400,0 L350,500" />
+                            <path d="M0,350 L900,380" stroke-width="4" />
+                        </svg>
+                    </div>
+
+                    <!-- Centered Custom Location PIN UI -->
+                    <div class="relative z-10 flex flex-col items-center bg-white p-4 shadow-2xl border border-neutral-200 max-w-xs text-center">
+                        <i class="fa-solid fa-location-pin text-neutral-900 text-3xl mb-2 animate-bounce"></i>
+                        <h4 class="font-serif font-bold text-xs">BOLALE HOTEL & RESTAURANT</h4>
+                        <p class="text-[9px] text-neutral-500 mt-1 uppercase">2 Elizabeth St. London, UK</p>
+                        <span class="block text-[8px] text-neutral-400 mt-1">Latitude: 51.5074° N, Longitude: 0.1278° W</span>
+                    </div>
+
+                    <!-- Custom Directions Badge on top -->
+                    <div class="absolute top-4 left-4 bg-neutral-950 text-white text-[10px] tracking-widest uppercase font-semibold px-4 py-2">
+                        <i class="fa-solid fa-map mr-2"></i> High-End District Central Map
+                    </div>
+                </div>
+
+                <!-- Sleek White/Grey Interactive Booking & Contact Form 
+                <div class="lg:col-span-5 bg-neutral-50 border border-neutral-200 p-8 space-y-6">
+                    <div class="text-left space-y-2">
+                        <h3 class="font-serif text-xl font-bold">Secure Your Booking</h3>
+                        <p class="text-xs text-neutral-500">We respond with availability confirmations in under 15 minutes.</p>
+                    </div>
+
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-left">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Your Full Name</label>
+                            <input type="text" required class="w-full bg-white border border-neutral-300 focus:border-black text-xs px-4 py-3 outline-none transition-colors" placeholder="e.g. Sterling Cooper">
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Contact Email</label>
+                            <input type="email" required class="w-full bg-white border border-neutral-300 focus:border-black text-xs px-4 py-3 outline-none transition-colors" placeholder="e.g. name@domain.com">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Service Type</label>
+                                <select class="w-full bg-white border border-neutral-300 focus:border-black text-xs px-4 py-3 outline-none transition-colors cursor-pointer">
+                                    <option>Room Stay Booking</option>
+                                    <option>Dining Table Reservation</option>
+                                    <option>Private Catered Event</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Ideal Date</label>
+                                <input type="date" class="w-full bg-white border border-neutral-300 focus:border-black text-xs px-4 py-3 outline-none transition-colors" value="2026-07-01">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Your Special Notes</label>
+                            <textarea rows="3" class="w-full bg-white border border-neutral-300 focus:border-black text-xs p-4 outline-none transition-colors" placeholder="Let us know dietary requirements or preferred luxury suite layouts..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-black hover:bg-neutral-800 text-white text-xs font-bold py-4 uppercase tracking-widest transition-all">
+                            Submit Inquiry Request
+                        </button>
+                    </form>
+                </div>-->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-neutral-950 text-neutral-400 py-16 border-t border-neutral-800 text-xs tracking-wider">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 text-left">
+            
+            <div class="space-y-4">
+                <span class="font-serif text-2xl font-bold tracking-wider text-white">BOLALE</span>
+                <p class="text-neutral-500 leading-relaxed text-[11px] max-w-xs">
+                    Curating elevated living environments and unparalleled gastronomy since 2026. Join our elite circle.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Facebook"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Twitter"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-white font-semibold uppercase tracking-widest text-[11px] mb-4">Navigations</h4>
+                <ul class="space-y-2 text-[11px]">
+                    <li><a href="#hero" class="hover:text-white transition-colors">Home Landing</a></li>
+                    <li><a href="#showcase" class="hover:text-white transition-colors">Culinary Menu</a></li>
+                    <li><a href="#rooms" class="hover:text-white transition-colors">Suites & Rooms</a></li>
+                    <li><a href="#gallery" class="hover:text-white transition-colors">Atmospheric Gallery</a></li>
+                    <li><a href="#awards" class="hover:text-white transition-colors">Our Awards</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-white font-semibold uppercase tracking-widest text-[11px] mb-4">Services</h4>
+                <ul class="space-y-2 text-[11px]">
+                    <li><a href="#rooms" class="hover:text-white transition-colors">Presidential Stay</a></li>
+                    <li><a href="#showcase" class="hover:text-white transition-colors">Acoustic Private Dining</a></li>
+                    <li><a href="#contact" class="hover:text-white transition-colors">Exclusive Catering</a></li>
+                    <li><a href="#contact" class="hover:text-white transition-colors">Airport Concierge Pickup</a></li>
+                    <li><button onclick="toggleManagerModal()" class="hover:text-white transition-colors text-left font-semibold text-white/80">Menu/Room Management</button></li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h4 class="font-serif text-white font-semibold uppercase tracking-widest text-[11px] mb-4">Newsletter Club</h4>
+                <p class="text-neutral-500 leading-relaxed text-[11px]">Subscribe to receive exclusive invitations to tasting menus and seasonal deals.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email Address" class="bg-neutral-900 border border-neutral-800 text-xs text-white px-4 py-2.5 outline-none w-full focus:border-neutral-500">
+                    <button onclick="handleSubscribe()" class="bg-white hover:bg-neutral-200 text-neutral-950 font-semibold px-4 text-xs transition-colors">
+                        Join
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-neutral-900 flex flex-col sm:flex-row justify-between items-center text-[10px] text-neutral-600 gap-4">
+            <span>© 2026 Bolale Hotel and Restaurant. All Rights Reserved. Crafted for elite luxury.</span>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-neutral-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-neutral-400 transition-colors">Terms of Luxury Service</a>
+                <a href="#" class="hover:text-neutral-400 transition-colors">Cookie Configurations</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE "LIVE MENU & ROOMS MANAGER" CONTROL MODAL -->
+    <!-- This satisfies the requirement: "the code must be easily changeable to add, edit or remove a list of foods and drinks" -->
+    <div id="managerModal" class="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white text-neutral-900 w-full max-w-4xl h-[85vh] flex flex-col relative border border-neutral-200">
+            
+            <!-- Modal Header -->
+            <div class="p-6 border-b border-neutral-200 flex justify-between items-center">
+                <div class="text-left">
+                    <h3 class="font-serif text-xl font-bold flex items-center gap-2 text-neutral-950">
+                        <i class="fa-solid fa-sliders"></i> Bolale Live Database Manager
+                    </h3>
+                    <p class="text-xs text-neutral-500">Add, edit, or remove menu items and luxury suites dynamically on this page.</p>
+                </div>
+                <button onclick="toggleManagerModal()" class="p-2 hover:bg-neutral-100 rounded-full text-neutral-500 hover:text-black transition-colors" aria-label="Close database manager">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (Grid Layout) -->
+            <div class="flex-1 overflow-y-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
+                
+                <!-- Left Panel: Create / Add New Element Form -->
+                <div class="space-y-6">
+                    <h4 class="font-serif text-base font-bold pb-2 border-b border-neutral-200">Add New Item</h4>
+                    
+                    <form id="creatorForm" onsubmit="handleCreateItem(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Target List</label>
+                            <select id="targetList" onchange="adaptCreatorFields()" class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2.5 outline-none cursor-pointer">
+                                <option value="food">Signature Plates (Food)</option>
+                                <option value="drinks">Artisanal Drinks (Drinks)</option>
+                                <option value="rooms">Bespoke Suites (Rooms)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label id="lblTitle" class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Item Title / Name</label>
+                            <input id="itemTitle" type="text" required class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2.5 outline-none" placeholder="e.g. Gold Dust Soufflé">
+                        </div>
+
+                        <div>
+                            <label id="lblSubtitle" class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Short Subtitle / Category</label>
+                            <input id="itemSubtitle" type="text" required class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2.5 outline-none" placeholder="e.g. Handcrafted Culinary Masterpiece">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label id="lblPrice" class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Price / Cost ($)</label>
+                                <input id="itemPrice" type="number" required class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2.5 outline-none" placeholder="e.g. 55">
+                            </div>
+                            <div id="roomBedsField" class="hidden">
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Number of Beds</label>
+                                <input id="roomBeds" type="number" class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2.5 outline-none" placeholder="e.g. 2">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Visual Image URL</label>
+                            <input id="itemImage" type="url" required class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2.5 outline-none" value="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600">
+                        </div>
+
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-neutral-600 mb-1">Full Detailed Description</label>
+                            <textarea id="itemDesc" rows="3" required class="w-full bg-neutral-50 border border-neutral-300 text-xs p-3 outline-none" placeholder="e.g. Baked with premium Madagascar vanilla, structural spun sugar cage..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-bold py-3 uppercase tracking-widest transition-all">
+                            Add To Live Website List
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Right Panel: View and Delete Current Elements -->
+                <div class="space-y-6 flex flex-col h-full">
+                    <h4 class="font-serif text-base font-bold pb-2 border-b border-neutral-200">Current Items Count / Delete Option</h4>
+                    
+                    <!-- Search Filter inside Manager Panel -->
+                    <input type="text" id="managerFilter" oninput="renderManagerList()" placeholder="Filter items listed below..." class="w-full bg-neutral-50 border border-neutral-300 text-xs px-4 py-2 outline-none">
+
+                    <!-- List Container -->
+                    <div id="managerListContainer" class="flex-1 overflow-y-auto space-y-3 max-h-[45vh] border border-neutral-200 p-2 bg-neutral-50">
+                        <!-- Instantly populated by Javascript -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="p-4 bg-neutral-100 border-t border-neutral-200 text-center">
+                <span class="text-[10px] text-neutral-500 uppercase tracking-widest">
+                    Your updates are instantly rendered to the live UI on this tab. You can test your customized items instantly!
+                </span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- GENERAL DIALOG NOTIFICATION SYSTEM (Replaces alerts) -->
+    <div id="customDialog" class="fixed bottom-6 right-6 z-[200] max-w-sm bg-neutral-900 text-white border border-neutral-800 p-4 shadow-2xl transition-all duration-300 translate-y-20 opacity-0 hidden">
+        <div class="flex items-start gap-3 text-left">
+            <div class="text-white mt-1">
+                <i id="dialogIcon" class="fa-solid fa-circle-check text-base"></i>
+            </div>
+            <div>
+                <h4 id="dialogTitle" class="text-xs font-bold uppercase tracking-wider">Success!</h4>
+                <p id="dialogMessage" class="text-[11px] text-neutral-400 mt-1 leading-relaxed">The action has completed successfully.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT STATE ENGINE -->
+    <script>
+        // Default initial lists for food, drinks, and rooms
+        // Highly extensible and easily changeable by modifying these arrays
+        let foods = [
+            {
+                id: 'food-1',
+                title: "Espresso Masterpieces",
+                subtitle: "Gourmet Plated Tiramisu & Truffle",
+                price: 25,
+                desc: "A stunning architecture of dark chocolate wafers layered with single-origin espresso-soaked sponge and luxurious black winter truffle cream.",
+                image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                id: 'food-2',
+                title: "Wagyu & Espresso Crusted Ribeye",
+                subtitle: "House Signature Steak Plate",
+                price: 85,
+                desc: "Grade A5 Japanese Wagyu steak encrusted in organic ground dark espresso beans, lightly charcoal-grilled, served with a velvety bone-marrow glaze.",
+                image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                id: 'food-3',
+                title: "Organic Harvest Greens",
+                subtitle: "Crispy Sesame Avocado Salad",
+                price: 19,
+                desc: "Locally sourced crispy green kale, hand-sliced hass avocados, roasted white and black sesame seeds with cold-pressed ginger vinaigrette.",
+                image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=600"
+            }
+        ];
+
+        let drinks = [
+            {
+                id: 'drink-1',
+                title: "Iced Favorites",
+                subtitle: "Pour-Over Cold Brew Infusion",
+                price: 12,
+                desc: "Cold-dripped over a 12-hour period using premium Ethiopian single-estate beans, sweetened naturally with local wild honeycomb.",
+                image: "https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                id: 'drink-2',
+                title: "Organic Beans Espresso Latte",
+                subtitle: "Perfect Latte Art Cappuccino",
+                price: 9,
+                desc: "Double-shot pressure extracted espresso topped with perfectly aerated micro-foam oat milk, featuring customized fine art leaf stenciling.",
+                image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=600"
+            },
+            {
+                id: 'drink-3',
+                title: "Charcoal Infused Smoky Tonic",
+                subtitle: "Night-Time Mocktail Signature",
+                price: 14,
+                desc: "Activated food-grade organic coconut charcoal, pressed fresh key lime, sparkling tonic, topped with a smoked rosemary twig garnish.",
+                image: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&q=80&w=600"
+            }
+        ];
+
+        let rooms = [
+            {
+                id: 'room-1',
+                title: "Luxury Super Delux",
+                subtitle: "Penthouse Suite with Skyline Views",
+                price: 299,
+                beds: 2,
+                guests: 3,
+                desc: "Our crown jewel. A gorgeous multi-level suite featuring handcrafted oak timber flooring, deep marble bathtubs, private terrace access, and customized organic linen sheets.",
+                image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=700"
+            },
+            {
+                id: 'room-2',
+                title: "Simple Family Room",
+                subtitle: "Cozy Minimalist Shared Living Space",
+                price: 399,
+                beds: 3,
+                guests: 4,
+                desc: "Tailor-designed for families desiring comfortable shared proximity without sacrificing class. Complete with an immersive entertainment console, smart acoustics, and fully loaded beverage bar.",
+                image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=700"
+            },
+            {
+                id: 'room-3',
+                title: "Luxury Family Delux",
+                subtitle: "Spacious High-Rise Suite with Lounge",
+                price: 499,
+                beds: 2,
+                guests: 4,
+                desc: "The ultimate family upgrade. Offering two detached master bedrooms, an adjacent dining and whiskey parlor, master chef private service access, and a panoramic skyline view of downtown.",
+                image: "https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&q=80&w=700"
+            },
+            {
+                id: 'room-4',
+                title: "Single Super Delux",
+                subtitle: "Individual High-End Solo Sanctuary",
+                price: 599,
+                beds: 1,
+                guests: 2,
+                desc: "For the discerning corporate traveler. High-speed custom fiber-optic line, premium ergonomic work lounge, individual air filter purifiers, and next-day clothing press service included.",
+                image: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=700"
+            }
+        ];
+
+        // Currently selected tab for the food/drink section
+        let currentTab = 'food';
+
+        // Initialize App on DOM Ready
+        window.addEventListener('DOMContentLoaded', () => {
+            renderShowcase();
+            renderRooms();
+            adaptCreatorFields();
+            renderManagerList();
+        });
+
+        // Toggle Mobile Navigation Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = "fa-solid fa-xmark text-xl";
+            } else {
+                menu.classList.add('hidden');
+                icon.className = "fa-solid fa-bars text-xl";
+            }
+        }
+
+        // Switch Culinary tabs (Signature Plates vs Artisanal Drinks)
+        function switchTab(tabType) {
+            currentTab = tabType;
+            const btnFood = document.getElementById('tabBtn-food');
+            const btnDrinks = document.getElementById('tabBtn-drinks');
+
+            if (tabType === 'food') {
+                btnFood.className = "pb-4 px-6 text-sm font-semibold uppercase tracking-widest border-b-2 border-black text-black focus:outline-none transition-all";
+                btnDrinks.className = "pb-4 px-6 text-sm font-medium uppercase tracking-widest border-b-2 border-transparent text-neutral-400 hover:text-black focus:outline-none transition-all";
+            } else {
+                btnDrinks.className = "pb-4 px-6 text-sm font-semibold uppercase tracking-widest border-b-2 border-black text-black focus:outline-none transition-all";
+                btnFood.className = "pb-4 px-6 text-sm font-medium uppercase tracking-widest border-b-2 border-transparent text-neutral-400 hover:text-black focus:outline-none transition-all";
+            }
+            renderShowcase();
+        }
+
+        // Render food or drinks in the Coffee-Shop style grids
+        function renderShowcase() {
+            const grid = document.getElementById('showcaseGrid');
+            grid.innerHTML = '';
+            
+            const currentList = (currentTab === 'food') ? foods : drinks;
+
+            if (currentList.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-1 md:col-span-3 text-center py-16 bg-white border border-neutral-200">
+                        <i class="fa-solid fa-hourglass-empty text-3xl text-neutral-300 mb-4 block"></i>
+                        <h4 class="font-serif text-lg font-semibold">No Items available in this category</h4>
+                        <p class="text-xs text-neutral-400 mt-1">Click "Customize Menu/Rooms" at the top to add your custom items!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            currentList.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-neutral-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col group";
+                
+                card.innerHTML = `
+                    <!-- Aspect ratio lock for premium visual grids -->
+                    <div class="h-64 overflow-hidden relative bg-neutral-100">
+                        <img src="${item.image}" alt="${item.title}" 
+                             onerror="this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600'"
+                             class="w-full h-full object-cover contrast-110 transition-all duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-neutral-900 px-3 py-1 text-xs font-bold font-serif tracking-wider">
+                            $${item.price}
+                        </div>
+                    </div>
+                    
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div class="space-y-2">
+                            <span class="text-[9px] font-semibold uppercase tracking-[0.2em] text-neutral-400 block">${item.subtitle}</span>
+                            <h3 class="font-serif text-xl font-bold text-neutral-900 group-hover:text-neutral-700 transition-colors">${item.title}</h3>
+                            <p class="text-xs text-neutral-500 leading-relaxed font-light">${item.desc}</p>
+                        </div>
+                        
+                        <div class="pt-4 border-t border-neutral-100 flex justify-between items-center">
+                            <span class="text-[10px] tracking-widest uppercase font-semibold text-neutral-400">Seasonal Special</span>
+                            <button onclick="handleReservationCall('${item.title}')" class="text-xs font-bold uppercase tracking-wider text-black hover:underline">
+                                Request Item
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Render Rooms Grid (Alternating split layout inspired by Anaheim Hotels image)
+        function renderRooms() {
+            const grid = document.getElementById('roomsGrid');
+            grid.innerHTML = '';
+
+            if (rooms.length === 0) {
+                grid.innerHTML = `
+                    <div class="text-center py-16 bg-neutral-50 border border-neutral-200">
+                        <i class="fa-solid fa-hotel text-3xl text-neutral-300 mb-4 block"></i>
+                        <h4 class="font-serif text-lg font-semibold">No Bespoke Suites Available</h4>
+                        <p class="text-xs text-neutral-400 mt-1">Use the Customize Panel at the top of the page to register premium room layouts.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            rooms.forEach((room, index) => {
+                const isEven = index % 2 === 0;
+                const row = document.createElement('div');
+                
+                // Construct responsive layout wrapping
+                row.className = `grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border border-neutral-200 p-6 lg:p-8 bg-neutral-50 hover:shadow-2xl transition-all duration-500`;
+                
+                // Determine alternating visual columns order
+                const imageColOrder = isEven ? 'lg:col-span-7 lg:order-1' : 'lg:col-span-7 lg:order-2';
+                const textColOrder = isEven ? 'lg:col-span-5 lg:order-2' : 'lg:col-span-5 lg:order-1';
+
+                row.innerHTML = `
+                    <!-- Image Panel -->
+                    <div class="${imageColOrder} h-72 sm:h-96 overflow-hidden relative">
+                        <img src="${room.image}" alt="${room.title}"
+                             onerror="this.src='https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&q=80&w=700'"
+                             class="w-full h-full object-cover hover:scale-105 transition-all duration-700">
+                        <div class="absolute inset-0 bg-neutral-950/10 pointer-events-none"></div>
+                        <div class="absolute bottom-4 left-4 bg-black text-white text-[10px] tracking-[0.2em] uppercase font-semibold px-4 py-2">
+                            PREMIUM STAY SUITE
+                        </div>
+                    </div>
+
+                    <!-- Text / Detail Content Panel -->
+                    <div class="${textColOrder} space-y-6 text-left">
+                        <div class="flex items-center gap-1 text-black">
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <i class="fa-solid fa-star text-xs"></i>
+                            <span class="text-[10px] tracking-widest uppercase font-semibold text-neutral-400 ml-2">12+ Verified Reviews</span>
+                        </div>
+
+                        <div class="space-y-2">
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-neutral-900">${room.title}</h3>
+                            <p class="text-xs text-neutral-400 uppercase tracking-widest font-semibold">${room.subtitle}</p>
+                        </div>
+
+                        <p class="text-xs text-neutral-500 leading-relaxed font-light">${room.desc}</p>
+
+                        <!-- Highlights list -->
+                        <div class="grid grid-cols-2 gap-4 py-4 border-y border-neutral-200">
+                            <div>
+                                <span class="block text-[10px] font-bold uppercase tracking-wider text-neutral-400">Starts From</span>
+                                <span class="font-serif text-lg font-bold text-black">$${room.price} <span class="text-xs text-neutral-500 font-sans font-light">/ Night</span></span>
+                            </div>
+                            <div>
+                                <span class="block text-[10px] font-bold uppercase tracking-wider text-neutral-400">Accommodations</span>
+                                <span class="text-xs font-semibold text-neutral-700 uppercase tracking-wide">
+                                    ${room.beds} Bed(s) • Max ${room.guests || (room.beds * 2)} Guests
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Reservation CTAs -->
+                        <div class="flex gap-4 pt-2">
+                            <a href="#contact" class="bg-black hover:bg-neutral-800 text-white text-xs font-bold py-3 px-6 uppercase tracking-widest transition-all">
+                                Book Now
+                            </a>
+                            <button onclick="handleReservationCall('${room.title}')" class="border border-neutral-300 hover:border-black text-neutral-700 hover:text-black text-xs font-semibold px-6 py-3 uppercase tracking-widest transition-all">
+                                More Details
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(row);
+            });
+        }
+
+        // Adapt fields dynamically inside the creation form depending on targets (Food / Drinks / Rooms)
+        function adaptCreatorFields() {
+            const target = document.getElementById('targetList').value;
+            const bedsField = document.getElementById('roomBedsField');
+            
+            // Labels
+            const lblTitle = document.getElementById('lblTitle');
+            const lblSubtitle = document.getElementById('lblSubtitle');
+            const lblPrice = document.getElementById('lblPrice');
+            const itemTitle = document.getElementById('itemTitle');
+            const itemSubtitle = document.getElementById('itemSubtitle');
+            const itemPrice = document.getElementById('itemPrice');
+
+            if (target === 'rooms') {
+                bedsField.classList.remove('hidden');
+                lblTitle.innerText = "Suite Name / Class";
+                lblSubtitle.innerText = "Views / Premium Subtitle";
+                lblPrice.innerText = "Rate / Cost Per Night ($)";
+                itemTitle.placeholder = "e.g. Master Garden Suite";
+                itemSubtitle.placeholder = "e.g. Panoramic Orchard View";
+                itemPrice.placeholder = "e.g. 450";
+            } else {
+                bedsField.classList.add('hidden');
+                lblTitle.innerText = "Item Title / Name";
+                lblSubtitle.innerText = "Short Subtitle / Category";
+                lblPrice.innerText = "Price / Cost ($)";
+                itemTitle.placeholder = "e.g. Gold Dust Soufflé";
+                itemSubtitle.placeholder = "e.g. Handcrafted Culinary Masterpiece";
+                itemPrice.placeholder = "e.g. 55";
+            }
+        }
+
+        // Toggle Live Database Manager Modal
+        function toggleManagerModal() {
+            const modal = document.getElementById('managerModal');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                renderManagerList();
+            } else {
+                modal.classList.add('hidden');
+            }
+        }
+
+        // Trigger dynamic additions from form
+        function handleCreateItem(event) {
+            event.preventDefault();
+            
+            const target = document.getElementById('targetList').value;
+            const title = document.getElementById('itemTitle').value;
+            const subtitle = document.getElementById('itemSubtitle').value;
+            const price = parseFloat(document.getElementById('itemPrice').value);
+            const image = document.getElementById('itemImage').value;
+            const desc = document.getElementById('itemDesc').value;
+            const beds = parseInt(document.getElementById('roomBeds').value) || 1;
+
+            const newItem = {
+                id: `${target}-${Date.now()}`,
+                title: title,
+                subtitle: subtitle,
+                price: price,
+                desc: desc,
+                image: image
+            };
+
+            if (target === 'food') {
+                foods.push(newItem);
+                showNotification("Success", `${title} successfully added to Signature Plates.`);
+            } else if (target === 'drinks') {
+                drinks.push(newItem);
+                showNotification("Success", `${title} successfully added to Artisanal Drinks.`);
+            } else if (target === 'rooms') {
+                newItem.beds = beds;
+                newItem.guests = beds * 2;
+                rooms.push(newItem);
+                showNotification("Success", `${title} successfully registered to Bespoke Suites.`);
+            }
+
+            // Reset inputs
+            document.getElementById('itemTitle').value = '';
+            document.getElementById('itemSubtitle').value = '';
+            document.getElementById('itemPrice').value = '';
+            document.getElementById('itemDesc').value = '';
+            
+            // Re-render components
+            renderShowcase();
+            renderRooms();
+            renderManagerList();
+        }
+
+        // Render current list of items in the Database Manager Sidebar with individual Delete buttons
+        function renderManagerList() {
+            const filterVal = document.getElementById('managerFilter').value.toLowerCase();
+            const container = document.getElementById('managerListContainer');
+            container.innerHTML = '';
+
+            const allItems = [
+                ...foods.map(f => ({ ...f, type: 'food', badge: 'Signature Plate' })),
+                ...drinks.map(d => ({ ...d, type: 'drink', badge: 'Artisanal Drink' })),
+                ...rooms.map(r => ({ ...r, type: 'room', badge: 'Suite Stay' }))
+            ];
+
+            const filtered = allItems.filter(item => 
+                item.title.toLowerCase().includes(filterVal) || 
+                item.subtitle.toLowerCase().includes(filterVal) ||
+                item.badge.toLowerCase().includes(filterVal)
+            );
+
+            if (filtered.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-10">
+                        <span class="text-xs text-neutral-400 font-medium">No records found matching your filter.</span>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(item => {
+                const row = document.createElement('div');
+                row.className = "bg-white p-3 border border-neutral-200 flex justify-between items-center gap-4 hover:border-black transition-colors";
+                row.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <img src="${item.image}" alt="${item.title}" class="w-10 h-10 object-cover rounded border border-neutral-300">
+                        <div>
+                            <span class="inline-block text-[8px] px-2 py-0.5 bg-neutral-100 border border-neutral-300 rounded font-bold uppercase tracking-wider text-neutral-600 mb-1">
+                                ${item.badge}
+                            </span>
+                            <h5 class="text-xs font-bold text-neutral-900">${item.title}</h5>
+                            <span class="text-[10px] text-neutral-500">$${item.price}</span>
+                        </div>
+                    </div>
+                    <button onclick="handleDeleteItem('${item.type}', '${item.id}', '${item.title}')" class="p-2 hover:bg-neutral-100 text-neutral-400 hover:text-black transition-colors" title="Delete Item">
+                        <i class="fa-solid fa-trash text-sm"></i>
+                    </button>
+                `;
+                container.appendChild(row);
+            });
+        }
+
+        // Handle item deletion dynamically
+        function handleDeleteItem(type, id, title) {
+            if (type === 'food') {
+                foods = foods.filter(f => f.id !== id);
+                showNotification("Deleted", `${title} has been removed from food menu.`);
+            } else if (type === 'drink') {
+                drinks = drinks.filter(d => d.id !== id);
+                showNotification("Deleted", `${title} has been removed from drinks menu.`);
+            } else if (type === 'room') {
+                rooms = rooms.filter(r => r.id !== id);
+                showNotification("Deleted", `${title} suite option has been decommissioned.`);
+            }
+
+            // Re-render components
+            renderShowcase();
+            renderRooms();
+            renderManagerList();
+        }
+
+        // Triggered upon clicking Check Availability CTA inside Hero Search
+        function handleCheckAvailability() {
+            showNotification("Checking Live Listings", "Our booking engines are verifying calendar dates with real-time room occupancies...", "fa-clock");
+            setTimeout(() => {
+                showNotification("Suite Available", "Great news! Three distinct ultra-luxury suites are completely open for your chosen timeline.", "fa-circle-check");
+                // Auto-scroll down to see suite cards
+                document.getElementById('rooms').scrollIntoView({ behavior: 'smooth' });
+            }, 1800);
+        }
+
+        // Custom notification dialog helper (eliminates alert usage)
+        function showNotification(title, message, iconClass = "fa-circle-check") {
+            const dialog = document.getElementById('customDialog');
+            const dTitle = document.getElementById('dialogTitle');
+            const dMsg = document.getElementById('dialogMessage');
+            const dIcon = document.getElementById('dialogIcon');
+
+            dTitle.innerText = title;
+            dMsg.innerText = message;
+            dIcon.className = `fa-solid ${iconClass} text-base`;
+
+            // Transition slide up & in
+            dialog.classList.remove('hidden');
+            setTimeout(() => {
+                dialog.classList.remove('translate-y-20', 'opacity-0');
+            }, 50);
+
+            // Hide automatically after 4 seconds
+            setTimeout(() => {
+                dialog.classList.add('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    dialog.classList.add('hidden');
+                }, 300);
+            }, 4000);
+        }
+
+        // Reservation CTA
+        function handleReservationCall(itemName) {
+            showNotification("Inquiry Selected", `You have selected: ${itemName}. Complete the details below to request priority booking confirmation.`, "fa-file-signature");
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            showNotification("Sending Request", "Connecting safely to our hotel and dining concierge servers...", "fa-circle-notch");
+            
+            setTimeout(() => {
+                showNotification("Inquiry Sent!", "Thank you for reaching out to Bolale. A confirmation email was sent to your inbox.", "fa-circle-check");
+                document.getElementById('contactForm').reset();
+            }, 1500);
+        }
+
+        // Footer Newsletter Sign-up
+        function handleSubscribe() {
+            showNotification("Joined VIP Circle", "Congratulations! You will now receive early-access invites to our tasting menu drafts.", "fa-envelope-open-text");
+        }
+    </script>
+</body>
+</html>
